@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 #gem for sign up
 gem 'clearance' , '~> 1.15.1'
 
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
