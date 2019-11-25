@@ -1,6 +1,6 @@
 
     <!DOCTYPE html>
-    <html>
+    <html lang = "en">
       <head>
         <title>DicasAcad</title>
         <%= csrf_meta_tags %>
@@ -8,20 +8,27 @@
 
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name ="viewport" content = "width=device-width , initial-scale=1">
       </head>
 
       <body>
         
-        <header>
+        <header class = "container">
+          <nav class = "navbar navbar-default">
+            <div class ="container-fluid">
+              <div class = "navbar-header">
+                <%= link_to "Menu" , root_path, class: "navbar-brand" %>
+              </div>
+        <ul class = "nav navbar-nav navbar-right">
          <% if signed_in? %>
           Signed in as: <%= current_user.email %>
-          <%= button_to 'Sign out', sign_out_path, method: :delete %>
+         <li> <%= link_to "Sign out", sign_out_path, method: :delete %></li>
         <% else %>
-          <%= link_to 'Sign in', sign_in_path %>
+         <li> <%= link_to "Sign in", sign_in_path %> </li>
         <% end %>
         </header>
 
-        <section>
+        <section class = "container">
 
           <div id="flash">
           <% flash.each do |key, value| %>
@@ -34,7 +41,7 @@
       </body>
     </html>
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
   <head>
     <title>DicasAcad</title>
@@ -49,4 +56,6 @@
     <%= yield %>
   </body>
 </html>
+-->
+
 
