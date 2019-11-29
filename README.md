@@ -1,11 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h3>DESNVOLVIMENTO
 
-Things you may want to cover:
+<p>Tentando fazer um css legal</p>
 
-AGORA FUNCIONA O MEU PC
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * Ruby version
 
