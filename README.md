@@ -5,6 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
+AGORA FUNCIONA O MEU PC
+
 * Ruby version
 
 * System dependencies
