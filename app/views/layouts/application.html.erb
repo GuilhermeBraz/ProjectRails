@@ -5,6 +5,8 @@
         <title>DicasAcad</title>
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,17 +14,16 @@
       </head>
 
       <body>
-        
         <header class = "container">
           <nav class = "navbar navbar-default">
-            <div class ="container-fluid">
-              <div class = "navbar-header">
-                <%= link_to "Menu" , root_path, class: "navbar-brand" %>
+            <div class ="container-fluid">            
+              <div class = "navbar-header">          
+              
               </div>
         <ul class = "nav navbar-nav navbar-right">
          <% if signed_in? %>
           Signed in as: <%= current_user.email %>
-         <li> <%= link_to "Sign out", sign_out_path, method: :delete %></li>
+         <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
         <% else %>
          <li> <%= link_to "Sign in", sign_in_path %> </li>
         <% end %>
