@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'railroady'
+
 #gem for sign up
 gem 'clearance' , '~> 1.15.1'
 gem 'bootstrap-sass', '~> 3.4.1'

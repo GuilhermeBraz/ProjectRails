@@ -4,7 +4,8 @@ class PerfilsController < ApplicationController
   # GET /perfils
   # GET /perfils.json
   def index
-    @perfils = Perfil.all
+    @user = User.find(current_user.id)
+    @perfils = @user.perfils.all
   end
 
   # GET /perfils/1

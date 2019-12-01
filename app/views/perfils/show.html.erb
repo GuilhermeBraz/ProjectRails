@@ -12,7 +12,11 @@
 
 <p>
   <strong>Sexo:</strong>
-  <%= @perfil.sexo %>
+   <%=if @perfil.sexo 
+             "homem" 
+          else 
+             "mulher" 
+          end%>  
 </p>
 
 <p>
