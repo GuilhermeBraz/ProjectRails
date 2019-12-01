@@ -25,8 +25,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'railroady'
-
 #gem for sign up
 gem 'clearance' , '~> 1.15.1'
 gem 'bootstrap-sass', '~> 3.4.1'
@@ -49,6 +47,7 @@ group :development do
 end
 
 group :test do
+  gem 'railroady'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'

@@ -13,12 +13,12 @@
 
   <div class="field form-group">
     <%= form.label :idade %>
-    <%= form.number_field :idade , class: 'form-control'%>
+    <%= form.number_field :idade ,in: 10..89 , class: 'form-control'%>
   </div>
 
   <div class="field form-group">
     <%= form.label :altura %>
-    <%= form.text_field :altura , class: 'form-control'%>
+    <%= form.number_field :altura ,in: 140..260, step:0.5 , class: 'form-control'%>
   </div>
 
   <div class="field form-group">
@@ -27,13 +27,11 @@
     <%= form.radio_button :sexo, true%>
     <%= form.label :sexo, "Mulher", :value => "false" %>
     <%= form.radio_button :sexo, false, :checked => true %>
-    <!--<%= form.label :sexo %>
-    <%= form.check_box :sexo %>-->
   </div>
 
   <div class="field form-group">
     <%= form.label :peso %>
-    <%= form.text_field :peso, class: 'form-control' %>
+    <%= form.number_field :peso,in: 40..200, step:0.5 ,  class: 'form-control' %>
   </div>
 
   <div class="field form-group">
@@ -45,6 +43,14 @@
     <%= form.label :atividade %>
     <%= form.select :atividade, [["Taxa metabolica basal(BMR-Basal Metabolic Rate)", "bmr"], ["Sedentario:pouco ou nada de exercicios", "sedentario: pouco ou nada de exercicios "],["Exercicio leve","exercicio leve"],["Exercicio moderado","exercicio moderado"],["Exercicio intenso","exercicio intenso"],["Exercicio extremamente intenso", "exercicio extremamente intenso"]], {}, {class: 'form-control'} %>
   </div>  
+
+  <div class="field form-group">
+    <%= form.label :ativo %><br />
+    <%= form.label :ativo, "ativar", :value => "true"  %>
+    <%= form.radio_button :ativo, true%>
+    <%= form.label :ativo, "não ativar", :value => "false" %>
+    <%= form.radio_button :ativo, false, :checked => true %>
+  </div>
 
   <div class="field ">
     <%= form.hidden_field :user_id , :value =>current_user.id %>

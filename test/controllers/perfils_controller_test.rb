@@ -17,7 +17,7 @@ class PerfilsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create perfil" do
     assert_difference('Perfil.count') do
-      post perfils_url, params: { perfil: { altura: @perfil.altura, atividade: @perfil.atividade, idade: @perfil.idade, objetivo: @perfil.objetivo, peso: @perfil.peso, sexo: @perfil.sexo, user_id: @perfil.user_id } }
+      post perfils_url, params: { perfil: { altura: @perfil.altura, atividade: @perfil.atividade, ativo: @perfil.ativo, caloria: @perfil.caloria, idade: @perfil.idade, objetivo: @perfil.objetivo, peso: @perfil.peso, sexo: @perfil.sexo, user_id: @perfil.user_id } }
     end
 
     assert_redirected_to perfil_url(Perfil.last)
@@ -34,7 +34,7 @@ class PerfilsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update perfil" do
-    patch perfil_url(@perfil), params: { perfil: { altura: @perfil.altura, atividade: @perfil.atividade, idade: @perfil.idade, objetivo: @perfil.objetivo, peso: @perfil.peso, sexo: @perfil.sexo, user_id: @perfil.user_id } }
+    patch perfil_url(@perfil), params: { perfil: { altura: @perfil.altura, atividade: @perfil.atividade, ativo: @perfil.ativo, caloria: @perfil.caloria, idade: @perfil.idade, objetivo: @perfil.objetivo, peso: @perfil.peso, sexo: @perfil.sexo, user_id: @perfil.user_id } }
     assert_redirected_to perfil_url(@perfil)
   end
 
