@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idade: 1
+  altura: 1.5
+  sexo: false
+  peso: 1.5
+  objetivo: MyString
+  atividade: MyString
+  user: one
+
+two:
+  idade: 1
+  altura: 1.5
+  sexo: false
+  peso: 1.5
+  objetivo: MyString
+  atividade: MyString
+  user: two
