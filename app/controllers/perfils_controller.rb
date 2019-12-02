@@ -6,6 +6,7 @@ class PerfilsController < ApplicationController
   def index
     @user = User.find(current_user.id)
     @perfils = @user.perfils.all
+
   end
 
   # GET /perfils/1
@@ -71,5 +72,6 @@ class PerfilsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def perfil_params
       params.require(:perfil).permit(:idade, :altura, :sexo, :ativo, :peso, :objetivo, :atividade, :caloria, :user_id)
+
     end
 end

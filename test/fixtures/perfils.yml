@@ -4,6 +4,7 @@ one:
   idade: 1
   altura: 1.5
   sexo: false
+
   ativo: false
   peso: 1.5
   objetivo: MyString
