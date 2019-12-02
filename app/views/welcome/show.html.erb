@@ -25,14 +25,14 @@
   </head> 
 
   <body>
-    <div class="container" style="background-color: #B8B8B8; height:1000px;">
+    <div class="container" style="background-color: #B8B8B8; height:2000px;">
         <div class="row no-gutters">
           <div class="col-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dkCT-hAP8SU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <%if @perfil != nil %>
-          
             <% if @perfil.objetivo == "perder peso"%>
             <h1>DICAS PARA PERDER PESO</h1>
-
+             
             <h2>1-Mastigue mais devagar</h2>
 
             <p>Pessoas que comem muito rápido têm maior tendência a engordar. Isso acontece porque o cérebro demora algum tempo para acusar que você já comeu o suficiente. 
@@ -77,7 +77,78 @@
             <h2>4-Evolua nos treinos</h2>
             <p>Aumente as cargas gradativamente, conforme sinta que está progredindo, só assim seu índice de massa magra também aumentará. Tente não estender seus treinos por mais de uma hora e treine todos os grupos musculares. Manter um diário de treinos, registrando seu progresso e definindo novas metas é uma forma eficiente de manter-se motivado e atento.</p>
             <%end%>
+            <h2>Calorias</h2>
+            <br>
+            
+            <!--calorias calculo -->
+            <% if @perfil.sexo
+            bmr = (66.47+(13.75*@perfil.peso)+(5*@perfil.altura)-(6.75*@perfil.idade))
+           if @perfil.atividade == "bmr"
+            total = bmr.round
+           elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
+            total =bmr*1.2
+            total.round 
+           elsif @perfil.atividade == "exercicio leve"
+            total =bmr*1.375
+            total.round 
+           elsif @perfil.atividade =="exercicio moderado"
+             total =bmr*1.55
+             total.round 
+           elsif @perfil.atividade =="exercicio intenso"
+             total =bmr*1.725
+             total.round
+           else
+             total =bmr*1.9
+             total.round
+           end
+            if total > 0 && total <=1800 
+              @perfil.caloria = 1
+            elsif total > 1800 && total <= 2600
+              @perfil.caloria = 2
+            else
+             @perfil.caloria = 3
+           end
+          else
+            bmr = (665.09+(9.56*@perfil.peso)+(1.84*@perfil.altura)-(4.67*@perfil.idade))
+            if @perfil.atividade == "bmr"
+            total = bmr.round
+           elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
+            total =bmr*1.2
+            total.round 
+           elsif @perfil.atividade == "exercicio leve"
+            total =bmr*1.375
+            total.round 
+           elsif @perfil.atividade =="exercicio moderado"
+             total =bmr*1.55
+             total.round 
+           elsif @perfil.atividade =="exercicio intenso"
+             total =bmr*1.725
+             total.round
+           else
+             total =bmr*1.9
+             total.round
+           end
+            if total > 0 && total <=1800 
+              @perfil.caloria = 1
+            elsif total > 1800 && total <= 2600
+              @perfil.caloria = 2
+            else
+             @perfil.caloria = 3
+           end
+          end%>
+
+          <%if @perfil.caloria == 1%>
+            <h1>Intervalo de até 1800 calorias</h1>
+            <h2>Baixa ingestão</h2>
+          <%elsif @perfil.caloria == 2%>
+            <h1>Intervalo 1800 - 2600 calorias</h1>
+            <h2>Media ingestão</h2>
+          <%else%>
+            <h1>Intervalo de maior que 2600 calorias</h1>
+            <h2>Alta ingestão</h2>
+          <%end%>
         <%end%>
+
           </div>
         </div>
       </div>
