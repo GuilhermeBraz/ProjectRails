@@ -2,69 +2,88 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		
-	</head>	
+  <head>
+        <style type="text/css">
+            h1{
+                font-family: 'Dekko'; 
+                color:white;
+                text-shadow: 0.5px 0.5px 0.5px black;
+            }
+            h2{
+              font-family: 'Dekko'; 
+              color:white;
+              text-shadow: 0.5px 0.5px 0.5px black;
+            }
+            p{
+                font-family: 'Dekko';
+                font-size: 25px;
+                color:white;
+                text-shadow: 0.5px 0.5px 0.5px black;
+            }
 
-	<body>
-		<div class="container" style="background-color: #e4e4e6; height:1000px;">
+        </style>
+  </head> 
+
+  <body>
+    <div class="container" style="background-color: #B8B8B8; height:1000px;">
         <div class="row no-gutters">
           <div class="col-12">
           <%if @perfil != nil %>
-          <p>
-            <strong>Idade:</strong>
-            <%= @perfil.idade %>
-          </p>
+          
+            <% if @perfil.objetivo == "perder peso"%>
+            <h1>DICAS PARA PERDER PESO</h1>
 
-          <p>
-            <strong>Altura:</strong>
-            <%= @perfil.altura %>
-          </p>
+            <h2>1-Mastigue mais devagar</h2>
 
-          <p>
-            <strong>Sexo:</strong>
-            <%=if @perfil.sexo 
-                      "homem" 
-                    else 
-                      "mulher" 
-                    end%>  
-          </p>
+            <p>Pessoas que comem muito rápido têm maior tendência a engordar. Isso acontece porque o cérebro demora algum tempo para acusar que você já comeu o suficiente. 
+            Estudos apontam que quem mastiga devagar acaba consumindo menos calorias, já que comem menos do que as pessoas que comem muito rápido. Além disso, alguns especialistas afirmam que
+            mastigar bastante aumenta a produção de hormônios ligados à perda de peso.</p>
+            
+            <h2>2-Corte alimentos com alto teor de açúcar</h2>
+            <p>É o vilão de qualquer pessoa que quer emagrecer e ter uma boa saúde. Estudos apontam que o açúcar ou os xaropes de milho, xarope de malte, maltose ou outros tipos de açúcar que são adicionados aos alimentos são muito prejudiciais e aumentam os riscos de obesidade, diabetes, doenças do coração, entre outros. Se você quer perder peso com saúde, uma das importantes dicas para emagrecer é prestar atenção nos rótulos dos alimentos para estes diferentes nomes que o açúcar pode ter, principalmente nos alimentos que dizem ser zero açúcar.</p>
+            
+            <h2>3-Evite tomar bebidas adoçadas e sucos de fruta</h2>
+            <p>O açúcar em sua forma líquida é ainda mais prejudicial do que sua versão sólida. É o que apontam alguns estudos em que as calorias do açúcar líquido se mostram como um dos alimentos mais capazes de engordar. Evite também os sucos naturais, pois, em geral, você não está consumindo a fibra da fruta, apenas o açúcar natural dela.</p>
+            
+            <h2>4-Use pratos menores</h2>
+            <p>Nosso cérebro tem parte importante quando queremos perder peso. Estudos indicam que, ao colocar menos comida em um prato que você sempre via cheio antes da dieta, o seu cérebro entenderá aquela refeição como deficiente, indicando que você vai precisar comer mais, aumentando a fome depois das refeições. Por isso, use pratos menores do que os que você está acostumado, pois assim, mesmo colocando menos comida nele, o seu cérebro vai identificar que você está comendo um prato cheio e passará a informação de que você está comendo o suficiente para se saciar.</p>
+            
+            <% elsif @perfil.objetivo == "manter o peso"%>  
+            <h1>DICAS PARA MANTER O PESO
 
-          <p>
-            <strong>Peso:</strong>
-            <%= @perfil.peso %>
-          </p>
+            <h2>1-Continue a praticar exercícios físicos</h2>
+            <p>De acordo com a American College of Sports Medicine (Faculdade Americana de Medicina Esportiva, tradução livre) praticar pelo menos 250 minutos de exercícios físicos moderados a cada semana ajuda a continuar com o peso ideal. Isso corresponde a somente 50 minutos de atividades diariamente. O Centers for Disease Control and Prevention (Centro de Controle e Prevenção de Doenças, em tradução livre) recomenda de 60 até 90 minutos de exercícios físicos moderados por dia durante a maior parte da semana.</p>
+            
+            <h2>2-Continue a se pesar</h2>
+            <p></p>
+            
+            <h2>3-Planeje as suas refeições</h2>
+            <p> Faça um cardápio semanal com todas as suas refeições e inclua alimentos com baixo teor de gordura e carboidratos no cardápio. Pense também no intervalo entre as refeições, em que pode bater a fome, e tenha sempre uma fruta guardada para situações de emergência.</p>
+            
+            <h2>4-Pense positivo</h2>
+            <p>Uma pesquisa realizada pela Penn State University (Universidade Estadual da Pensilvânia) descobriu que as pessoas com atitudes mais positivas obtinham maior sucesso em relação à manutenção do peso perdido. Sendo assim, para fazer parte dessa estatística seja mais otimista e acredite em você mesmo. Olhe-se no espelho e perceba que se você conseguiu perder todo o peso que desejava, também sabe como manter o peso saudável.</p>
+            <%else%>
+            <h1>DICAS PARA GANHAR MASSA
 
-          <p>
-            <strong>Objetivo:</strong>
-            <%= @perfil.objetivo %>
-          </p>
-
-          <p>
-            <strong>Atividade:</strong>
-            <%= @perfil.atividade %>
-          </p>
-
-          <p>
-            <strong>User:</strong>
-            <%= @perfil.user_id %>
-          </p>
-
-          <p>
-            <strong>Ativo:</strong>
-            <%= if @perfil.ativo 
-              "sim"
-              else
-                "não"
-              end%>
-          </p>
-          <%end%>
+            <h2>1- Proteínas eficientes</h2>
+            <p>As carnes vermelha, de frango e peixe, desde que livres da gordura, são pouco calóricas e alto valor proteico, assim como ovos e grãos como a quinoa. Barrinhas industrializadas de proteína também podem ser encontradas com facilidade nos mercados e são boas opções para quem não tem tempo de se alimentar adequadamente logo após o treino.</p>
+            
+            <h2>2- Invista nas atividades aeróbias</h2>
+            <p>Se você não sai da sala de musculação, saiba que intercalar uma atividade aeróbica à prática pode fazer com que os resultados sejam mais rápidos. Ciclismo, corrida e natação são exemplos de atividades que podem servir como complemento da musculação.</p>
+            
+            <h2>3- Repouso</h2>
+            <p>É ideal para que aconteça a recuperação muscular. Tenha boas noites de sono e evite treinar mais do que cinco vezes na semana, uma frequência maior pode levar ao overtraining (mais exercícios do que seu corpo é capaz de recuperar) e fazer com que você perca massa muscular ao invés de ganhar.</p>
+            
+            <h2>4-Evolua nos treinos</h2>
+            <p>Aumente as cargas gradativamente, conforme sinta que está progredindo, só assim seu índice de massa magra também aumentará. Tente não estender seus treinos por mais de uma hora e treine todos os grupos musculares. Manter um diário de treinos, registrando seu progresso e definindo novas metas é uma forma eficiente de manter-se motivado e atento.</p>
+            <%end%>
+        <%end%>
           </div>
         </div>
       </div>
-	</body>	
+  </body> 
 </html>
 
-	
+  
 
 
