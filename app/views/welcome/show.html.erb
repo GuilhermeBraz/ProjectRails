@@ -10,7 +10,55 @@
 		<div class="container" style="background-color: #e4e4e6; height:1000px;">
         <div class="row no-gutters">
           <div class="col-12">
+          <%if @perfil != nil %>
+          <p>
+            <strong>Idade:</strong>
+            <%= @perfil.idade %>
+          </p>
 
+          <p>
+            <strong>Altura:</strong>
+            <%= @perfil.altura %>
+          </p>
+
+          <p>
+            <strong>Sexo:</strong>
+            <%=if @perfil.sexo 
+                      "homem" 
+                    else 
+                      "mulher" 
+                    end%>  
+          </p>
+
+          <p>
+            <strong>Peso:</strong>
+            <%= @perfil.peso %>
+          </p>
+
+          <p>
+            <strong>Objetivo:</strong>
+            <%= @perfil.objetivo %>
+          </p>
+
+          <p>
+            <strong>Atividade:</strong>
+            <%= @perfil.atividade %>
+          </p>
+
+          <p>
+            <strong>User:</strong>
+            <%= @perfil.user_id %>
+          </p>
+
+          <p>
+            <strong>Ativo:</strong>
+            <%= if @perfil.ativo 
+              "sim"
+              else
+                "não"
+              end%>
+          </p>
+          <%end%>
           </div>
         </div>
       </div>

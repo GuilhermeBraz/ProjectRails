@@ -1,6 +1,6 @@
 class PerfilsController < ApplicationController
   before_action :set_perfil, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_login
   # GET /perfils
   # GET /perfils.json
   def index
