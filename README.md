@@ -9,7 +9,7 @@ Mas antes...
 Funcionalidades:
 
 * <p>O nosso site possui dois tipos de pessoas os que possuem uma conta e os que não possuem uma conta:</p>
-	<p>Os que não estão possuem uma conta terão acesso apenas à pagina inicial com imformações a respeito do site. Sendo a mesma responsável por fazer o login dos usuários.</p>
+	<p>Os que não possuem uma conta terão acesso apenas à pagina inicial com imformações a respeito do site. Sendo a mesma responsável por fazer o login dos usuários.</p>
 	<p>Os que possuem uma conta poderam fazer login na página inicial. Após o login ter sido efeituado, o usuário terá acesso à customização do seu perfil que será necessário para receber suas dicas.</p>
 
 * <p>Perfil:</p>
