@@ -21,9 +21,9 @@ Funcionalidades:
 * <p>UML:</p>
 	<p>MODELS:</p>
 
-		![models_diagram](UMLmodels.png)
+		![models_diagram](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/UMLmodels.png)
 
 
 	<p>CONTROLLERS:</p>
 		
-		![controllers_diagram](UMLcontrollers.png)
+		![controllers_diagram](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/UMLcontrollers.png)
