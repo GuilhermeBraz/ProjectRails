@@ -35,7 +35,7 @@
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>User id:</strong>
   <%= @perfil.user_id %>
 </p>
 
@@ -53,32 +53,42 @@
   <%= if @perfil.sexo
     bmr = (66.47+(13.75*@perfil.peso)+(5*@perfil.altura)-(6.75*@perfil.idade))
    if @perfil.atividade == "bmr"
-    bmr
+    bmr.round
    elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
     bmr*1.2
+    bmr.round
    elsif @perfil.atividade == "exercicio leve"
     bmr*1.375
+    bmr.round
    elsif @perfil.atividade =="exercicio moderado"
     bmr*1.55
+    bmr.round
    elsif @perfil.atividade =="exercicio intenso"
     bmr*1.725
+    bmr.round
    else
     bmr*1.9
+    bmr.round
    end
   else
     bmr = (665.09+(9.56*@perfil.peso)+(1.84*@perfil.altura)-(4.67*@perfil.idade))
     if @perfil.atividade == "bmr"
-      bmr
+      bmr.round
      elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
       bmr*1.2
+      bmr.round
      elsif @perfil.atividade == "exercicio leve"
       bmr*1.375
+      bmr.round
      elsif @perfil.atividade =="exercicio moderado"
       bmr*1.55
+      bmr.round
      elsif @perfil.atividade =="exercicio intenso"
       bmr*1.725
+      bmr.round
      else
       bmr*1.9
+      bmr.round
      end
   end%>
 </p>
