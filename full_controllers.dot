@@ -1,0 +1,8 @@
+digraph controllers_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"WelcomeController" [shape=Mrecord, label="{WelcomeController|show\l|\l|_layout\l}"]
+	"ApplicationController" [shape=Mrecord, label="{ApplicationController|\l|\l|_layout\lauthenticate\lauthorize\lcurrent_user\lcurrent_user=\ldeny_access\lhandle_unverified_request\lrequire_login\lsign_in\lsign_out\lsigned_in?\lsigned_out?\l}"]
+	"PerfilsController" [shape=Mrecord, label="{PerfilsController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|_layout\lperfil_params\lset_perfil\l}"]
+	"ApplicationController" -> "WelcomeController" [label="", arrowhead="none", arrowtail="onormal"]
+	"ApplicationController" -> "PerfilsController" [label="", arrowhead="none", arrowtail="onormal"]
+}

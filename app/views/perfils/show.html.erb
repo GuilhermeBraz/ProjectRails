@@ -12,7 +12,11 @@
 
 <p>
   <strong>Sexo:</strong>
-  <%= @perfil.sexo %>
+   <%=if @perfil.sexo 
+             "homem" 
+          else 
+             "mulher" 
+          end%>  
 </p>
 
 <p>
@@ -33,6 +37,50 @@
 <p>
   <strong>User:</strong>
   <%= @perfil.user_id %>
+</p>
+
+<p>
+  <strong>Ativo:</strong>
+  <%= if @perfil.ativo 
+     "sim"
+    else
+      "não"
+    end%>
+</p>
+
+<p>
+  <strong>Caloria:</strong>
+  <%= if @perfil.sexo
+    bmr = (66.47+(13.75*@perfil.peso)+(5*@perfil.altura)-(6.75*@perfil.idade))
+   if @perfil.atividade == "bmr"
+    bmr
+   elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
+    bmr*1.2
+   elsif @perfil.atividade == "exercicio leve"
+    bmr*1.375
+   elsif @perfil.atividade =="exercicio moderado"
+    bmr*1.55
+   elsif @perfil.atividade =="exercicio intenso"
+    bmr*1.725
+   else
+    bmr*1.9
+   end
+  else
+    bmr = (665.09+(9.56*@perfil.peso)+(1.84*@perfil.altura)-(4.67*@perfil.idade))
+    if @perfil.atividade == "bmr"
+      bmr
+     elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
+      bmr*1.2
+     elsif @perfil.atividade == "exercicio leve"
+      bmr*1.375
+     elsif @perfil.atividade =="exercicio moderado"
+      bmr*1.55
+     elsif @perfil.atividade =="exercicio intenso"
+      bmr*1.725
+     else
+      bmr*1.9
+     end
+  end%>
 </p>
 
 <%= link_to 'Edit', edit_perfil_path(@perfil) %> |

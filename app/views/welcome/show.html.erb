@@ -3,30 +3,68 @@
 
 <html>
 	<head>
+		
+	</head>	
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-		<meta charset="utf-8">
-		<title>loged</title>
-	</head>
-	
 	<body>
-		
-		<div class="d-inline p-2 bg-dark text-white"><h1>MACRONUTRIENTES</h1></div>
-		<div class="wrapper">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/dkCT-hAP8SU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-		<div class = "title-container">
-		</div>
-		
-	</body>
+		<div class="container" style="background-color: #e4e4e6; height:1000px;">
+        <div class="row no-gutters">
+          <div class="col-12">
+          <%if @perfil != nil %>
+          <p>
+            <strong>Idade:</strong>
+            <%= @perfil.idade %>
+          </p>
+
+          <p>
+            <strong>Altura:</strong>
+            <%= @perfil.altura %>
+          </p>
+
+          <p>
+            <strong>Sexo:</strong>
+            <%=if @perfil.sexo 
+                      "homem" 
+                    else 
+                      "mulher" 
+                    end%>  
+          </p>
+
+          <p>
+            <strong>Peso:</strong>
+            <%= @perfil.peso %>
+          </p>
+
+          <p>
+            <strong>Objetivo:</strong>
+            <%= @perfil.objetivo %>
+          </p>
+
+          <p>
+            <strong>Atividade:</strong>
+            <%= @perfil.atividade %>
+          </p>
+
+          <p>
+            <strong>User:</strong>
+            <%= @perfil.user_id %>
+          </p>
+
+          <p>
+            <strong>Ativo:</strong>
+            <%= if @perfil.ativo 
+              "sim"
+              else
+                "não"
+              end%>
+          </p>
+          <%end%>
+          </div>
+        </div>
+      </div>
+	</body>	
 </html>
-<style> body {
-	background-color: gray;
-	background-image: url("https://ucarecdn.com/3a1581ce-0b54-4663-bea7-1f9336fd8ae8/-/stretch/off/-/resize/3000x/-/quality/lighter/");
-  	background-repeat: no-repeat;
-  	background-position: 200px 500px;
-	}
+
 	
 
 

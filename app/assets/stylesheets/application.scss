@@ -1,2 +1,44 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  height: 100px;
+}
+
+.logo{
+  background-image: url('icone-logo.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+.menu h5{
+  color: white;
+  text-shadow: 1px 1px 1px red;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.menu ul{
+  list-style: none;
+}
+
+.menu ul li{
+  float: left;
+  padding: 31px 0 0 85px;
+}
+
+.menu ul li a{
+  color: white;
+  display: block;
+  text-shadow: 1px 1px 1px red;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.menu ul{
+	
+}

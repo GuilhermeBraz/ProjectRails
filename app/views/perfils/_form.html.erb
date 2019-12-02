@@ -1,51 +1,71 @@
 <%= form_with(model: perfil, local: true) do |form| %>
   <% if perfil.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(perfil.errors.count, "error") %> prohibited this perfil from being saved:</h2>
+      <h2 style="color: red";><%= pluralize(perfil.errors.count, "error") %> prohibited this perfil from being saved:</h2>
 
       <ul>
         <% perfil.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <li style="color: red";><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :idade %>
-    <%= form.number_field :idade %>
+    <%= form.number_field :idade ,in: 10..89 , class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :altura %>
-    <%= form.text_field :altura %>
+    <%= form.number_field :altura ,in: 140..260, step:0.5 , class: 'form-control'%>
   </div>
 
-  <div class="field">
-    <%= form.label :sexo %>
-    <%= form.check_box :sexo %>
+  <div class="field form-group">
+     <%= form.label :sexo %><br />
+    <%= form.label :sexo, "Homem", :value => "true"  %>
+    <%= form.radio_button :sexo, true%>
+    <%= form.label :sexo, "Mulher", :value => "false" %>
+    <%= form.radio_button :sexo, false, :checked => true %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :peso %>
-    <%= form.text_field :peso %>
+    <%= form.number_field :peso,in: 40..200, step:0.5 ,  class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :objetivo %>
-    <%= form.text_field :objetivo %>
+    <%= form.select :objetivo, [["Perder peso", "perder peso"], ["Manter o peso", "manter o peso"],["Ganhar peso", "ganhar peso"]], {}, {class: 'form-control'} %>
   </div>
 
-  <div class="field">
+   <div class="field form-group">
     <%= form.label :atividade %>
-    <%= form.text_field :atividade %>
+    <%= form.select :atividade, [["Taxa metabolica basal(BMR-Basal Metabolic Rate)", "bmr"], ["Sedentario:pouco ou nada de exercicios", "sedentario: pouco ou nada de exercicios"],["Exercicio leve","exercicio leve"],["Exercicio moderado","exercicio moderado"],["Exercicio intenso","exercicio intenso"],["Exercicio extremamente intenso", "exercicio extremamente intenso"]], {}, {class: 'form-control'} %>
+  </div>  
+
+  <div class="field form-group">
+    <%= form.label :ativo %><br />
+    <%= form.label :ativo, "ativar", :value => "true"  %>
+    <%= form.radio_button :ativo, true%>
+    <%= form.label :ativo, "não ativar", :value => "false" %>
+    <%= form.radio_button :ativo, false, :checked => true %>
   </div>
 
-  <div class="field">
+  <div class="field ">
     <%= form.hidden_field :user_id , :value =>current_user.id %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions form-group">
+    <%= form.submit 'Submit perfil', class: 'btn btn-success' %>
   </div>
+
+  <ul style="margin-top:0px;margin-left:-20px;">
+  <li class="smalltext"><b>Frequencia cardiaca maxima(FCM):</b> A frequência cardíaca máxima consiste no número máximo de batimentos cardíacos no espaço de 1 minuto durante o esforço.</li>
+  <li class="smalltext"><b>Exercicio leve:</b> caminhadas de 30 a 50 minutos 3 a 4 dias por semana por exemplo</li>
+  <li class="smalltext"><b>Exercicio moderado:</b> 3 a 5 vezes por semana (60 a 70% da nossa FCM, e 30 a 60 minutos por sessão)</li>
+  <li class="smalltext"><b>Exercicio intenso:</b> reinos a 6 a 7 vezes por semana, com uma intensidade modera a alta, 70 a 85% da FCM, e 45 a 60 minutos por sessão</li>
+  <li class="smalltext"><b>Exercicio extramente intenso:</b> pessoas envolvidas em actividades muito intensas, 6 a 7 vezes por semana e mais de 90 minutos por sessão,  desde trabalhos que exijam muito em termos físicos, como culturistas, powerlifters e outros atletas competitivos como atletas de resistência</li>
+</ul>
+
 <% end %>

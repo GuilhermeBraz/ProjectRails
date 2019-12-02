@@ -16,6 +16,7 @@ class PerfilsTest < ApplicationSystemTestCase
 
     fill_in "Altura", with: @perfil.altura
     fill_in "Atividade", with: @perfil.atividade
+    check "Ativo" if @perfil.ativo
     fill_in "Idade", with: @perfil.idade
     fill_in "Objetivo", with: @perfil.objetivo
     fill_in "Peso", with: @perfil.peso
@@ -33,6 +34,8 @@ class PerfilsTest < ApplicationSystemTestCase
 
     fill_in "Altura", with: @perfil.altura
     fill_in "Atividade", with: @perfil.atividade
+    check "Ativo" if @perfil.ativo
+    fill_in "Caloria", with: @perfil.caloria
     fill_in "Idade", with: @perfil.idade
     fill_in "Objetivo", with: @perfil.objetivo
     fill_in "Peso", with: @perfil.peso

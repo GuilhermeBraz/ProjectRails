@@ -4,16 +4,21 @@ one:
   idade: 1
   altura: 1.5
   sexo: false
+
+  ativo: false
   peso: 1.5
   objetivo: MyString
   atividade: MyString
+  caloria: 1.5
   user: one
 
 two:
   idade: 1
   altura: 1.5
   sexo: false
+  ativo: false
   peso: 1.5
   objetivo: MyString
   atividade: MyString
+  caloria: 1.5
   user: two
