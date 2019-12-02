@@ -35,6 +35,7 @@ class PerfilsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update perfil" do
     patch perfil_url(@perfil), params: { perfil: { altura: @perfil.altura, atividade: @perfil.atividade, ativo: @perfil.ativo, caloria: @perfil.caloria, idade: @perfil.idade, objetivo: @perfil.objetivo, peso: @perfil.peso, sexo: @perfil.sexo, user_id: @perfil.user_id } }
+
     assert_redirected_to perfil_url(@perfil)
   end
 
