@@ -13,6 +13,13 @@
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
         <meta name ="viewport" content = "width=device-width , initial-scale=1">
+
+  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        
       </head>
 
       <body>
@@ -47,9 +54,34 @@
         </div>
         <%= yield %>
         <% if signed_out? %>
-            <p></p>
-            <h1>BEM VINDO AO NOSSO SITE!<h1>
-            <p>   Nele tu receberás dicas para manter-se saudável...</p>
+            
+            
+            <div class="container">
+              <p></p>
+              <h1>BEM VINDO AO NOSSO SITE!</h1>                                       
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">INFORMATION
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><strong><p>   Nele tu receberás dicas para manter-se saudável...</p></strong></li>
+                  <li><strong><p>Após efetuar seu loggin por favor edite seu perfil, localizado no canto superior direito, para receber suas dicas</p></strong></li>
+                </ul>
+              </div>
+            </div>  
+
+            <head>
+              <style>
+              body { 
+                background-image: url('http://clipart-library.com/new_gallery/23-238511_professional-development-sites-for-umbraco-transparent-blue-wave.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: 100% 90%; 
+
+                
+              }
+              </style>
+              </head>
+            
         <% end %>
         </section>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
