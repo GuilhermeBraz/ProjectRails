@@ -55,41 +55,31 @@
    if @perfil.atividade == "bmr"
     bmr.round
    elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
-    bmr*1.2
-    bmr.round
+    (bmr*1.2).round
    elsif @perfil.atividade == "exercicio leve"
-    bmr*1.375
-    bmr.round
+    (bmr*1.375).round
    elsif @perfil.atividade =="exercicio moderado"
-    bmr*1.55
-    bmr.round
+    (bmr*1.55).round
    elsif @perfil.atividade =="exercicio intenso"
-    bmr*1.725
-    bmr.round
+    (bmr*1.725).round
    else
-    bmr*1.9
-    bmr.round
+    (bmr*1.9).round
    end
   else
     bmr = (665.09+(9.56*@perfil.peso)+(1.84*@perfil.altura)-(4.67*@perfil.idade))
-    if @perfil.atividade == "bmr"
-      bmr.round
-     elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
-      bmr*1.2
-      bmr.round
-     elsif @perfil.atividade == "exercicio leve"
-      bmr*1.375
-      bmr.round
-     elsif @perfil.atividade =="exercicio moderado"
-      bmr*1.55
-      bmr.round
-     elsif @perfil.atividade =="exercicio intenso"
-      bmr*1.725
-      bmr.round
-     else
-      bmr*1.9
-      bmr.round
-     end
+     if @perfil.atividade == "bmr"
+    bmr.round
+   elsif @perfil.atividade == "sedentario: pouco ou nada de exercicios"
+    (bmr*1.2).round
+   elsif @perfil.atividade == "exercicio leve"
+    (bmr*1.375).round
+   elsif @perfil.atividade =="exercicio moderado"
+    (bmr*1.55).round
+   elsif @perfil.atividade =="exercicio intenso"
+    (bmr*1.725).round
+   else
+    (bmr*1.9).round
+   end
   end%>
 </p>
 
