@@ -3,7 +3,7 @@ digraph models_diagram {
 	"ApplicationRecord" []
 	"User" [shape=Mrecord, label="{User|id :integer\lcreated_at :datetime(6)\lupdated_at :datetime(6)\lemail :varchar\lencrypted_password :varchar(128)\lconfirmation_token :varchar(128)\lremember_token :varchar(128)\l}"]
 	"Perfil" [shape=Mrecord, label="{Perfil|id :integer\lidade :integer\laltura :float\lsexo :boolean\lativo :boolean\lpeso :float\lobjetivo :varchar\latividade :varchar\lcaloria :float\luser_id :integer\lcreated_at :datetime(6)\lupdated_at :datetime(6)\l}"]
-	"User" -> "Perfil" [arrowtail=odot, arrowhead=crow, dir=both color="#CC7F09"]
+	"User" -> "Perfil" [arrowtail=odot, arrowhead=crow, dir=both color="#66F26D"]
 	"ApplicationRecord" -> "User" [label="", arrowhead="none", arrowtail="onormal"]
 	"ApplicationRecord" -> "Perfil" [label="", arrowhead="none", arrowtail="onormal"]
 }
