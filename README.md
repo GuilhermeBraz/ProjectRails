@@ -9,11 +9,11 @@ Mas antes...
 Funcionalidades:
 
 * <p>O nosso site possui dois tipos de pessoas os que possuem uma conta e os que não possuem uma conta:</p>
-	<p>Os que não estão possuem uma conta terão acesso apenas à pagina inicial com imformações a respeito do site. Sendo a mesma responsável por fazer o login dos usuários.</p>
+	<p>Os que não possuem uma conta terão acesso apenas à pagina inicial com imformações a respeito do site. Sendo a mesma responsável por fazer o login dos usuários.</p>
 	<p>Os que possuem uma conta poderam fazer login na página inicial. Após o login ter sido efeituado, o usuário terá acesso à customização do seu perfil que será necessário para receber suas dicas.</p>
 
 * <p>Perfil:</p>
-	<p>O perfil só pode ser editado(dados ficticios serão aceitos) após o usuário ter "logado" no site. Nele voce digita sua idade, altura, sexo, objetivo(marca a opção desejada), atividade(marca a opção desejada). O perfil é essencial para suas dicas serem geradas.É possível o cadastro de varios perfils para cada usuario, com isso é necessário dizer qual o usuario quer que seja ativo para ser geradas as dicas(só é possível um ativo por vez caso queira trocar qual quer ativo , é necessário editar o perfil e colocar o anterior ativo falso antes de ativar o novo para que não ocorra erro)</p>
+	<p>O perfil só pode ser editado(dados ficticios serão aceitos) após o usuário ter "logado" no site. Nele voce digita sua idade, altura, sexo, objetivo(marca a opção desejada), atividade(marca a opção desejada). O perfil é essencial para suas dicas serem geradas. É possível o cadastro de varios perfils para cada usuario. Com isso, é necessário marcar/ativar o perfil desejado para serem geradas as dicas(<strong>só é possível um ativo por vez<strong> caso queira trocar o perfil ativado , é necessário editá-lo e colocar o anterior "ativo" em falso antes de deixar o novo verdadeiro para não ocorrerem erros)</p>
 
 * <p>Dicas:</p>
 	<p>As dicas que também já foram predefinidas serão escolhidas automaticamente após os dados do seu perfil terem sido preenchidos.</p>
