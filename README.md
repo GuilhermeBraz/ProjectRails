@@ -27,3 +27,7 @@ Funcionalidades:
 	<p>CONTROLLERS:</p>
 		
 		![controllers_diagram](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/UMLcontrollers.png)
+
+	<p>CASOS DE USO</p>
+		
+		![CASOS_DE_USO](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/Diagrama Casos de Uso.png)
