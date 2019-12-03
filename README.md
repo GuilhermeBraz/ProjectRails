@@ -9,10 +9,12 @@ Mas antes...
 ps:: caso tenha problemas para baixar essa versão específica do ruby, recomanda-se usar rvm para baixar essa versão.
 </p>
 <p>O Rails está na versão 6.0.1</p>
+<p>O Puma está na versão 4.3.0</p>
+<p>webpacker está na versão 4.2.0</p>
 </strong>
-<p>Após baixar o Ruby e o Rails nas versões sinalizadas e ter dado clone no projeto faça o comando "bundle install", para baixar as gems e pacotes utilzados na aplicação</p>
-<p>Após isso de "rails s". O terminal pode reclamar muito provavelmente da falta do yarn na sua pasta. Caso ele reclame siga as intruções do terminal que ira pedir para usar o comando "yarn install". Após isso tente dar rails s mais uma vez.</p>
-<p>No seu browser após acessar o seu local host o site pode reclamar da migração. Faça a migração necessaria, descrita no proprio site, ou simplesmente aperte o botão de fazer a migração, támbem no próprio site. Agora, se tudo der certo, o site estará funcionando</p>
+<p>Após baixar o Ruby e o Rails nas versões sinalizadas e ter dado clone na branch master projeto faça o comando "bundle install", para baixar as gems e pacotes utilzados na aplicação</p>
+<p>Após isso, de "rails s". O terminal pode reclamar muito provavelmente da falta do yarn na sua pasta. Caso ele reclame siga as intruções do terminal que ira pedir para usar o comando "yarn install". Após isso tente dar rails s mais uma vez e abra seu browser.</p>
+<p>No seu browser, acesse local host:3000 como endereço. O site pode reclamar da migração. Faça a migração necessaria, descrita no proprio site, ou simplesmente aperte o botão de fazer a migração, támbem no próprio site. Agora, se tudo der certo, o site estará funcionando</p>
 
 Funcionalidades:
 
