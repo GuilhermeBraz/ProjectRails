@@ -3,7 +3,15 @@
 Este README irá descrever as funcionalidades do nosso site
 
 Mas antes...
-<p>Ao fazer clone na branch master e dar "rails s" o terminal pode reclamar muito provavelmente da falta do yarn na sua pasta. Caso ele reclame siga as intruções do terminal que ira pedir para usar o comando "yarn install". Após isso tente dar rails s mais uma vez.</p>
+<strong>
+<p>O código foi feito no ruby 2.6.3
+	<br>
+ps:: caso tenha problemas para baixar essa versão específica do ruby, recomanda-se usar rvm para baixar essa versão.
+</p>
+<p>O Rails está na versão 6.0.1</p>
+</strong>
+<p>Após baixar o Ruby e o Rails nas versões sinalizadas e ter dado clone no projeto faça o comando "bundle install", para baixar as gems e pacotes utilzados na aplicação</p>
+<p>Após isso de "rails s". O terminal pode reclamar muito provavelmente da falta do yarn na sua pasta. Caso ele reclame siga as intruções do terminal que ira pedir para usar o comando "yarn install". Após isso tente dar rails s mais uma vez.</p>
 <p>No seu browser após acessar o seu local host o site pode reclamar da migração. Faça a migração necessaria, descrita no proprio site, ou simplesmente aperte o botão de fazer a migração, támbem no próprio site. Agora, se tudo der certo, o site estará funcionando</p>
 
 Funcionalidades:
