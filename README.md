@@ -20,14 +20,10 @@ Funcionalidades:
 
 * <p>UML:</p>
 	<p>MODELS:</p>
-
-		[models_diagram](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/UMLmodels.png)
-
-
-	<p>CONTROLLERS:</p>
+		[Models_Diagram](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/UMLmodels.png)
 		
+	<p>CONTROLLERS:</p>
 		[controllers_diagram](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/UMLcontrollers.png)
 
 	<p>CASOS DE USO</p>
-		
 		[CASOS_DE_USO](https://github.com/GuilhermeBraz/ProjectRails/blob/Rafael/Diagrama Casos de Uso.png)
